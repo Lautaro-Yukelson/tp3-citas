@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ListadoCitas from "./components/ListadoCitas/ListadoCitas";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>ADMINISTRADOR DE PACIENTES</h1>
+      <div className="container">
+        <div className="row">
+          <div className="one-half column">
+            <h2>Crear mi Cita</h2>
+            <form>
+              <label>Nombre Mascota</label>
+              <input
+                type="text"
+                name="mascota"
+                className="u-full-width"
+                placeholder="Nombre Mascota"
+                value=""
+              />
+              <label>Nombre Dueño</label>
+              <input
+                type="text"
+                name="propietario"
+                className="u-full-width"
+                placeholder="Nombre dueño de la mascota"
+                value=""
+              />
+              <label>Fecha</label>
+              <input
+                type="date"
+                name="fecha"
+                className="u-full-width"
+                value=""
+              />
+              <label>hora</label>
+              <input
+                type="time"
+                name="hora"
+                className="u-full-width"
+                value=""
+              />
+              <label>Sintomas</label>
+              <textarea name="sintomas" className="u-full-width"></textarea>
+              <button type="submit" className="u-full-width button-primary">
+                Agregar Cita
+              </button>
+            </form>
+          </div>
+          <div className="one-half column">
+            <h2>Administra tus citas</h2>
+            <ListadoCitas />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
