@@ -1,4 +1,5 @@
 import "./CardCita.css";
+import Button from "../Button/Button";
 
 function CardCita(props) {
   return (
@@ -8,9 +9,10 @@ function CardCita(props) {
         <p>Fecha: <span>{props.Fecha}</span></p>
         <p>Hora: <span>{props.Hora}</span></p>
         <p>Sintomas: <span>{props.Sintomas}</span></p>
-        <button className="button elimnar u-full-width">
-            Eliminar ×
-        </button>
+        <Button 
+          clase = "button eliminar u-full-width"
+          texto = "Eliminar ×"
+        />
     </div>
   );
 }

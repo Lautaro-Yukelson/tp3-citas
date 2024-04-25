@@ -1,8 +1,11 @@
 import "./Button.css";
 
-function Button() {
+function Button(props) {
   return (
     <>
+      <button type={props.tytpe} className={props.clase}>
+          {props.texto}
+      </button>
     </>
   );
 }
