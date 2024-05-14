@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tp3-citas/static/css/main.bd3807f1.css",
+    "main.js": "/tp3-citas/static/js/main.6370f756.js",
+    "index.html": "/tp3-citas/index.html",
+    "main.bd3807f1.css.map": "/tp3-citas/static/css/main.bd3807f1.css.map",
+    "main.6370f756.js.map": "/tp3-citas/static/js/main.6370f756.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd3807f1.css",
+    "static/js/main.6370f756.js"
+  ]
+}
