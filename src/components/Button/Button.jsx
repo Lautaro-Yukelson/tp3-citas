@@ -1,10 +1,10 @@
 import "./Button.css";
 
-function Button(props) {
+function Button({ clase, texto, eliminarCita }) {
   return (
     <>
-      <button type={props.tytpe} className={props.clase}>
-          {props.texto}
+      <button className={clase} onClick={eliminarCita}>
+        {texto}
       </button>
     </>
   );

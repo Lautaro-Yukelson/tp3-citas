@@ -1,18 +1,36 @@
 import "./CardCita.css";
 import Button from "../Button/Button";
 
-function CardCita(props) {
+function CardCita({
+  data: { id, mascota, dueño, fecha, hora, sintomas },
+  eliminarCita,
+}) {
+  const handleClickEliminar = () => {
+    eliminarCita(id);
+  };
+
   return (
     <div className="cita">
-        <p>Mascota: <span>{props.Mascota}</span></p>
-        <p>Dueño: <span>{props.Dueño}</span></p>
-        <p>Fecha: <span>{props.Fecha}</span></p>
-        <p>Hora: <span>{props.Hora}</span></p>
-        <p>Sintomas: <span>{props.Sintomas}</span></p>
-        <Button 
-          clase = "button eliminar u-full-width"
-          texto = "Eliminar ×"
-        />
+      <p>
+        Mascota: <span>{mascota}</span>
+      </p>
+      <p>
+        Dueño: <span>{dueño}</span>
+      </p>
+      <p>
+        Fecha: <span>{fecha}</span>
+      </p>
+      <p>
+        Hora: <span>{hora}</span>
+      </p>
+      <p>
+        Sintomas: <span>{sintomas}</span>
+      </p>
+      <Button
+        clase="button eliminar u-full-width"
+        texto="Eliminar X"
+        eliminarCita={handleClickEliminar}
+      />
     </div>
   );
 }

@@ -3,13 +3,13 @@ import "./FormInput.css";
 function FormInput(props) {
   return (
     <>
-    <label>{props.label}</label>
+      <label>{props.label}</label>
       <input
-        type= {props.type}
+        type={props.type}
         name={props.name}
         className="u-full-width"
         placeholder={props.placeholder}
-        value=""
+        onChange={props.onChange}
       />
     </>
   );
